@@ -2,7 +2,7 @@ var restify = require('restify');
 var server = restify.createServer();
 var callbacks = require('./server-callback');
 var promise = require('./server-promise');
-var rx = require('./server-rx');
+var rx = require('./server-rxjs');
 
 server.get('/callback-simple', callbacks.simple);
 server.get('/promise-simple', promise.simple);

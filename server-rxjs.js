@@ -3,7 +3,7 @@ module.exports = {
     /**
      */
     simple: function simpleRx(req, res, next) {
-        api.rx.subscribe(function myRx(data) {
+        api.rx().subscribe(function myRx(data) {
             res.send(data);
             next();
         });
