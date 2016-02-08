@@ -12,6 +12,12 @@ var client = restifyClients.createJsonClient({
 if (type === 'callback') {
     runner('/callback-simple', totalTries)();
 }
+if (type === 'promise') {
+    runner('/promise-simple', totalTries)();
+}
+if (type === 'rx') {
+    runner('/rx-simple', totalTries)();
+}
 
 function runner(url, count) {
     var i = 0;
